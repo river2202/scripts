@@ -1,0 +1,12 @@
+#!/bin/bash
+
+echo "tip: git branch --sort -committerdate | head -n10"
+echo ""
+
+if [[ $# -gt 0 ]]; then
+    git branch --sort -committerdate | head -n$1
+else
+    git branch --sort -committerdate | head -n10
+fi
+
+

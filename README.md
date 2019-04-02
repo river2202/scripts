@@ -17,6 +17,9 @@ Git recent branches, list most n(10) recent branches
 ## gs
 Git switch, list most recent branches and select index to switch.
 
+## xc
+Open .xcworkspace or .xcodeproj if xcworkspace missing.
+
 # Installaltion
 Download the script file or copy the scripts to you loacl machine's folder which as added to PATH and run the script file inside local git repo folder.
 

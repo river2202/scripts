@@ -25,6 +25,6 @@ Download the script file or copy the scripts to you loacl machine's folder which
 
 You can use following script to download and make it  executable by following command:
 
-`curl -L -x 'http://proxy.nab.com.au:10091' https://github.aus.thenational.com/P784620/scripts/raw/master/gpr -o tmp && chmod +x tmp && mv tmp qpr`
+`curl -L https://github.com/river2202/scripts/raw/master/gpr -o tmp && chmod +x tmp && mv tmp qpr`
 
 You can change the file name(command name) to whatever you think work best for you.

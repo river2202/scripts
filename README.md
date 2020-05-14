@@ -28,3 +28,10 @@ You can use following script to download and make it  executable by following co
 `curl -L https://github.com/river2202/scripts/raw/master/gpr -o tmp && chmod +x tmp && mv tmp qpr`
 
 You can change the file name(command name) to whatever you think work best for you.
+
+# Mac setup
+1. Xcode
+2. git clone https://github.com/river2202/scripts -> Codes
+3. Homebrew
+4. Alfred
+5. iTerm2 + zsh + z + git + autocomplete

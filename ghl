@@ -1,0 +1,8 @@
+#!/bin/bash
+remoteUrl=$(git-home-url | head -n1)
+
+# github
+open "${remoteUrl}/pulls"
+
+# gitlab
+# open "${remoteUrl}/merge_requests"

@@ -35,3 +35,16 @@ You can change the file name(command name) to whatever you think work best for y
 3. Homebrew
 4. Alfred
 5. iTerm2 + zsh + z + git + autocomplete
+6. Shortcuts for delete/duplicate line
+https://stackoverflow.com/questions/551383/xcode-duplicate-delete-line/28595785
+http://funkworks.blogspot.com/2013/03/republishing-of-wwwerasetotheleftcompos.html
+https://www.andr.mu/logs/xcode-custom-key-bindings/
+https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/EventOverview/TextDefaultsBindings/TextDefaultsBindings.html
+
+
+7. count swift lines
+find . -name "*.swift" -print0 | xargs -0 wc -l
+https://gist.github.com/Tokuriku/f7d6ce5a68d2154c28b0
+
+or 
+http://www.redotheweb.com/CodeFlower/

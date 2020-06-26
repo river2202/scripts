@@ -1,0 +1,12 @@
+#!/bin/bash
+echo ""
+git ls-files -v|grep '^S'
+
+# echo "list all skip-worktree files"
+echo ""
+echo ""
+echo ""
+echo "Un-skip: git update-index --no-skip-worktree <file_name>"
+echo "To skip: git update-index --skip-worktree <file_name>"
+echo ""
+echo "https://compiledsuccessfully.dev/git-skip-worktree/"

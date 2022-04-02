@@ -59,3 +59,20 @@ http://www.redotheweb.com/CodeFlower/
 
 11. Android studio
 11. Flutter 
+
+
+#### Conditional git profile configuration
+https://dev.to/tastefulelk/conditional-git-profile-configuration-212b 
+
+```
+// ~/.gitconfig
+[user]
+    name = Sebastian Bille
+    email = personal@example.com
+
+[includeIf "gitdir:~/code/work/"]
+    path = ~/code/work/.gitconfig
+// ~/code/work/.gitconfig
+[user]
+    email = work@example.com
+```

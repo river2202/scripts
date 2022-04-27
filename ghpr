@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Open gitlab / github, merge request / 
+# Open github create pull request page using current branch
 remoteUrl=$(git-home-url | head -n1)
 branch=$(git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/\1/")
 open "${remoteUrl}/compare/${branch}?expand=1"

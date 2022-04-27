@@ -5,6 +5,9 @@ Productivity scripts.
 ## gh
 Open repo home page
 
+## gmr
+Open Create MR page in Gitlab using current branch
+
 ## gp
 Open compare and create PR page using current working branch
 
@@ -14,8 +17,11 @@ Open repo's PR page to review others PR.
 ## gr [n]
 Git recent branches, list most n(10) recent branches
 
-## gs
+## gs [n]
 Git switch, list most recent branches and select index to switch.
+
+## gs-r [n]
+Git switch to remote branch, list most recent remote branches and select index to switch.
 
 ## xc
 Open .xcworkspace or .xcodeproj if xcworkspace missing.
@@ -76,3 +82,6 @@ https://dev.to/tastefulelk/conditional-git-profile-configuration-212b
 [user]
     email = work@example.com
 ```
+
+### Alfred
+1. https://github.com/LeEnno/alfred-terminalfinder

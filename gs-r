@@ -1,0 +1,29 @@
+#!/bin/bash
+
+if [[ $# -gt 0 ]]; then
+  n=$1
+else
+  n=10
+fi
+
+var=`git branch --remote --sort -committerdate | sed '/HEAD/d' | sed 's/origin\///g' | head -n$n`
+
+set -f
+array=(${var//\*/ })
+
+for i in "${!array[@]}"
+do
+    echo "$i. ${array[i]}"
+done
+
+echo ""
+echo -n "Select branch index (enter for 0, q to quit):"
+read  -n1 index
+
+echo ""
+
+if [ "$index" = "q" ]; then
+  exit 0
+fi
+
+git checkout ${array[$index]}

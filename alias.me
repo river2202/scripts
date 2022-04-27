@@ -21,3 +21,7 @@ alias ij="open -a /Applications/IntelliJ\ IDEA\ CE.app/ ."
 alias von="osascript -e 'tell app \"Tunnelblick\" to connect \"river-huang\"'"
 alias voff="osascript -e 'tell app \"Tunnelblick\" to disconnect \"river-huang\"'"
 alias av=aws-vault
+
+# send paste board content to android phone text edit
+alias apb="pbpaste | xargs adb shell input text"
+alias ap="adb shell input text"

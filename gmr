@@ -1,9 +1,7 @@
 #!/bin/bash
 
-# Open gitlab / github, merge request / 
+# Open Create MR page in Gitlab using current branch
 remoteUrl=$(git-home-url | head -n1)
 branch=$(git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/\1/")
 open "${remoteUrl}/merge_requests/new?utf8=✓&merge_request[source_branch]=${branch}"
 
-# https://repo.master.littlepayco.de/sdk/ecom.ios-sdk/merge_requests/new
-# https://repo.master.littlepayco.de/sdk/ecom.ios-sdk/pulls

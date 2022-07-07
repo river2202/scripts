@@ -1,3 +1,26 @@
 #!/bin/bash
-open $(git remote -v | awk '/fetch/{print $2}' | sed -Ee 's#(git@|git://)#http://#' -e 's@com:@com/@' -e 's@de:@de/@' | head -n1)
 
+var=`git remote -v | awk '/fetch/{print $2}'`
+
+set -f
+array=(${var//\*/ })
+index=0
+
+if [ "${#array[@]}" -gt 1 ]; then
+    for i in "${!array[@]}"
+    do
+        echo "$i. ${array[i]}"
+    done
+
+    echo ""
+    echo -n "Select branch index (enter for 0, q to quit):"
+    read  -n1 index
+
+    echo ""
+
+    if [ "$index" = "q" ]; then
+        exit 0
+    fi
+fi
+
+open $(echo ${array[$index]} | sed -Ee 's#(git@|git://)#http://#' -e 's@org:@org/@' -e 's@com:@com/@' -e 's@de:@de/@' | head -n1)

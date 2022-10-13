@@ -1,0 +1,5 @@
+#!/bin/bash
+remoteUrl=$(git-home-url-gerrit | head -n1)
+
+# github
+open "${remoteUrl}"

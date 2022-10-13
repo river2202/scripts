@@ -4,9 +4,11 @@ var=`git remote -v | awk '/fetch/{print $2}'`
 
 set -f
 array=(${var//\*/ })
-index=0
+array_len=${#array[@]}
+index=$1
 
-if [ "${#array[@]}" -gt 1 ]; then
+if [[ "${array_len}" -gt 1 && ${index} -ge ${array_len} ]];
+then
     for i in "${!array[@]}"
     do
         echo "$i. ${array[i]}"
@@ -23,4 +25,14 @@ if [ "${#array[@]}" -gt 1 ]; then
     fi
 fi
 
-open $(echo ${array[$index]} | sed -Ee 's#(git@|git://)#http://#' -e 's@org:@org/@' -e 's@com:@com/@' -e 's@de:@de/@' | head -n1)
+remoteUrl=${array[$index]}
+
+if [[ $remoteUrl == ssh* ]] ;
+then
+    remoteUrl=$(echo ${remoteUrl} | awk -F '@' '{print $2}' | awk -F ':[0-9]+\/' '{print "https://" $1 "/q/project:" $2}' )
+else
+    remoteUrl=$(echo ${remoteUrl} | sed -Ee 's#(git@|git://)#http://#' -e 's@org:@org/@' -e 's@com:@com/@' -e 's@de:@de/@' | head -n1)
+fi
+
+echo "${remoteUrl}"
+open ${remoteUrl}

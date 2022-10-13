@@ -9,11 +9,9 @@ brew install --cask visual-studio-code
 brew install --cask rectangle
 brew install --cask alfred
 brew install --cask notion
+brew install --cask google-chrome
+brew install --cask slack
 
-echo "export PATH=$(pwd):"'$PATH' >> ~/.zshrc
-echo "source $(pwd)/alias.me" >> ~/.zshrc
-
-
-## Flutter
+# Flutter
 ./install-flutter.sh
 

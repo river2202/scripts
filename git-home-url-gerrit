@@ -1,0 +1,5 @@
+#!/bin/bash
+
+remoteUrl=$(git remote -v | awk '{print $2}' | awk -F '@' '{print $2}' | awk -F ':[0-9]+\/' '{print "https://" $1 "/q/project:" $2}' )
+
+echo "${remoteUrl}"

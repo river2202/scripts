@@ -18,13 +18,14 @@ alias ao="open -a /Applications/Android\ Studio.app ."
 alias gb="git branch --sort -committerdate | head -n10"
 alias ij="open -a /Applications/IntelliJ\ IDEA\ CE.app/ ."
 
-alias von="osascript -e 'tell app \"Tunnelblick\" to connect \"river-huang\"'"
-alias voff="osascript -e 'tell app \"Tunnelblick\" to disconnect \"river-huang\"'"
+alias von="osascript -e 'tell app \"Tunnelblick\" to connect \"rhuang-aglet\"'"
+alias voff="osascript -e 'tell app \"Tunnelblick\" to disconnect \"rhuang-aglet\"'"
 alias av=aws-vault
 
 # send paste board content to android phone text edit
 alias apb="pbpaste | xargs adb shell input text"
 alias ap="adb shell input text"
-alias f="flutter"
-alias fpg="flutter pub get"
-alias fprb="flutter pub run build_runner build --delete-conflicting-outputs"
+alias fpg="fvm flutter pub get"
+alias fprb="fvm flutter pub run build_runner build --delete-conflicting-outputs"
+alias f="fvm flutter"
+alias d="fvm dart"

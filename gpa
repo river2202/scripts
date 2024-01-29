@@ -1,0 +1,12 @@
+#!/bin/bash
+
+pushComand=$(git push 2>&1 |  grep set-upstream)
+
+if [ -z "$pushComand" ]; then
+    echo "Everything up-to-date"
+else
+    echo $pushComand
+    eval "$pushComand"
+fi
+
+

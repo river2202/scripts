@@ -1,0 +1,8 @@
+#!/bin/bash
+
+# clean up remote branch
+# git branch -r | grep FP-/1 | sed 's/\// :/' | xargs -L 1 echo
+
+# git branch | grep FP- | sed 's/\// :/' | xargs -L 1 echo
+
+git branch | grep FP- | xargs -L 1 git branch -d 

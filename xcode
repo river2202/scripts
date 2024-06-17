@@ -1,0 +1,7 @@
+#!/bin/bash
+
+echo "open Xcode-$1"
+
+open /Applications/Xcode-$1.app/Contents/MacOS/Xcode
+
+
